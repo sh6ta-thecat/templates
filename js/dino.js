@@ -4,7 +4,7 @@
 const Dino = (() => {
     const GROUND_OFFSET = 100;
     const GRAVITY = 0.8;
-    const JUMP_FORCE = -14;
+    const JUMP_FORCE = -16;
 
     let W = 900, H = 600;
     let dino = { x: 50, y: 0, w: 30, h: 40, vy: 0, jumping: false };
