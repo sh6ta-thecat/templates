@@ -1,0 +1,145 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: radial-gradient(ellipse at center, #0a0a18 0%, #000 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+    color: #fff;
+}
+
+#gameContainer {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    border-radius: 14px;
+    box-shadow: 0 0 40px rgba(0, 255, 136, 0.35), inset 0 0 20px rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    max-width: 95vw;
+}
+
+canvas {
+    border: 2px solid #00ff88;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
+    display: block;
+    background: #050510;
+    width: 900px;
+    height: 600px;
+    max-width: 90vw;
+    max-height: 70vh;
+    image-rendering: pixelated;
+}
+
+#topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 6px 12px;
+    font-size: 0.85em;
+    color: #00ff88;
+}
+
+#topBar .title {
+    font-weight: bold;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #00ff88, 2px 0 0 #ff00ff;
+}
+
+#topBar .subtitle { color: #888; font-style: italic; }
+
+#info {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    background: rgba(0, 255, 136, 0.08);
+    border: 1px solid #00ff88;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #00ff88;
+    font-size: 0.85em;
+    min-width: 110px;
+}
+
+.stat span { color: #fff; }
+
+.comboStat { border-color: #ffcc00; color: #ffcc00; }
+.comboStat span { color: #fff; }
+.comboStat.active {
+    animation: comboPulse 0.4s ease-in-out infinite alternate;
+    box-shadow: 0 0 20px #ffcc00;
+}
+
+@keyframes comboPulse {
+    from { transform: scale(1); }
+    to   { transform: scale(1.08); }
+}
+
+#scores {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+    font-size: 0.9em;
+}
+
+.score {
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid #555;
+}
+
+.score.snake  { border-color: #00ff44; color: #00ff44; }
+.score.tetris { border-color: #00ffff; color: #00ffff; }
+.score.dino   { border-color: #ff4444; color: #ff4444; }
+.score.total  { border-color: #ffcc00; color: #ffcc00; font-weight: bold; }
+
+#audioControls {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.audioBtn {
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid #00ff88;
+    color: #00ff88;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.75em;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.audioBtn:hover { background: rgba(0, 255, 136, 0.3); }
+
+#controls {
+    color: #777;
+    margin-top: 8px;
+    font-size: 0.75em;
+    line-height: 1.4;
+}
+
+#controls kbd {
+    background: #00ff88;
+    color: #000;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+    margin: 0 1px;
+    font-size: 0.9em;
+}

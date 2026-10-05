@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLITCH RUN — Tres mundos. Un error.</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="900" height="600"></canvas>
+
+        <div id="topBar">
+            <span class="title">GLITCH RUN</span>
+            <span class="subtitle">Tres mundos. Un error.</span>
+        </div>
+
+        <div id="info">
+            <div class="stat">NIVEL <span id="levelDisplay">1/20</span></div>
+            <div class="stat">SOBRECARGA <span id="overloadDisplay">0%</span></div>
+            <div class="stat comboStat">COMBO <span id="comboDisplay">x1</span></div>
+        </div>
+
+        <div id="scores">
+            <div class="score snake">🐍 <span id="snakeScore">0</span></div>
+            <div class="score tetris">🧩 <span id="tetrisScore">0</span></div>
+            <div class="score dino">🦖 <span id="dinoScore">0</span></div>
+            <div class="score total">TOTAL <span id="totalScore">0</span></div>
+        </div>
+
+        <div id="audioControls">
+            <button id="btnMusic" class="audioBtn">🎵 MÚSICA ON</button>
+            <button id="btnSfx" class="audioBtn">🔊 EFECTOS ON</button>
+        </div>
+
+        <div id="controls">
+            <kbd>←↑↓→</kbd> Snake &nbsp;|&nbsp;
+            <kbd>Espacio</kbd> Saltar / Reiniciar / Saltar intro &nbsp;|&nbsp;
+            <kbd>A</kbd> Rotar Tetris &nbsp;|&nbsp;
+            <kbd>S</kbd> Bajar rápido
+        </div>
+    </div>
+
+    <script src="js/audio.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/glitches.js"></script>
+    <script src="js/intro.js"></script>
+    <script src="js/snake.js"></script>
+    <script src="js/tetris.js"></script>
+    <script src="js/dino.js"></script>
+    <script src="js/hud.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
