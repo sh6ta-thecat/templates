@@ -3,15 +3,15 @@
 // ==================================================
 const Dino = (() => {
     const GROUND_OFFSET = 100;
-    const GRAVITY = 0.6;
-    const JUMP_FORCE = -12;
+    const GRAVITY = 0.98;
+    const JUMP_FORCE = -14;
 
     let W = 900, H = 600;
     let dino = { x: 50, y: 0, w: 30, h: 40, vy: 0, jumping: false };
     let obstacles = [];
     let obstacleTimer = 0;
-    let obstacleInterval = 55;
-    let speed = 6;
+    let obstacleInterval = 80;
+    let speed = 8;
     let score = 0;
 
     function init(w, h) {
