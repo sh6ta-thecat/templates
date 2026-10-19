@@ -143,3 +143,26 @@ canvas {
     margin: 0 1px;
     font-size: 0.9em;
 }
+
+#footer {
+    margin-top: 12px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0, 255, 136, 0.2);
+    font-size: 0.75em;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Courier New', monospace;
+}
+
+#footer a {
+    color: #00ff88;
+    text-decoration: none;
+    border-bottom: 1px dotted #00ff88;
+    transition: color 0.2s;
+}
+
+#footer a:hover {
+    color: #ffffff;
+}
